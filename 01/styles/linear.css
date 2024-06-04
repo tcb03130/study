@@ -1,0 +1,16 @@
+div {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+.gradient {
+  background: blue;
+  /* 왼쪽 위에서 오른쪽 아래 방향으로 파랑에서 흰색으로 */
+  background: linear-gradient(to right bottom, blue, white);
+}
+.gradient-1 {
+  background: linear-gradient(0deg, red, white);
+}
+.gradient-2 {
+  background: linear-gradient(45deg, blue, white 30%, red);
+}

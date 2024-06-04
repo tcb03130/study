@@ -1,0 +1,29 @@
+p {
+  width: 500px;
+  height: 200px;
+  background-color: aquamarine;
+  border: 1px solid palevioletred;
+}
+.static {
+  /* 문서의 흐름에 맞춰 배치, 기본값 */
+  position: fixed;
+  z-index: 1;
+}
+.relative-1 {
+  /* 위치 값을 지정할 수 있다. 그외 static과 동일 */
+  position: relative;
+}
+
+.relative-2 {
+  position: relative;
+  top: -50px;
+  left: 100px;
+}
+.fixed {
+  width: 300px;
+  height: 100px;
+  background-color: blueviolet;
+  /* position: fixed;
+  top: 30px;
+  right: 30px; */
+}

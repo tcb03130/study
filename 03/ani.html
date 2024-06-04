@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      #wrap {
+        width: 500px;
+        margin: 20px auto;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 40px;
+        float: left;
+      }
+      #box1 {
+        background-color: chocolate;
+        /*  transparent 투명하게 */
+        border: 1px solid transparent;
+        animation-name: shape;
+        animation-duration: 2s;
+        /* 무한반복infinite(숫자적으면 횟수) */
+        animation-iteration-count: infinite;
+        /* 자연스럽게? */
+        animation-direction: alternate;
+      }
+      #box2 {
+        background-color: blueviolet;
+        border: 1px solid transparent;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+        /* 거꾸로 */
+        animation-direction: reverse;
+      }
+      #box3 {
+        background-color: brown;
+        /* animation: rotate3d 2s infinite, background 2s infinite alternate; */
+      }
+      #box3:hover {
+        background-color: brown;
+        animation: rotate3d 2s infinite, background 2s infinite alternate;
+      }
+      @keyframes shape {
+        from {
+          border: 1px solid transparent;
+        }
+        to {
+          border: 1px solid #000;
+          border-radius: 50%;
+        }
+      }
+      @keyframes rotate {
+        form {
+          transform: rotate(0deg);
+          border: 1px solid transparent;
+        }
+        to {
+          transform: rotate(45deg);
+          border: 1px solid #000;
+        }
+      }
+      @keyframes rotate3d {
+        from {
+          transform: perspective(150px) rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(150px) rotateX(-180deg) rotateY(0deg);
+        }
+        to {
+          transform: perspective(150px) rotateX(-180deg) rotateY(-180deg);
+        }
+      }
+      @keyframes background {
+        from {
+          background-color: aquamarine;
+        }
+        50% {
+          background-color: olivedrab;
+        }
+        to {
+          background-color: blueviolet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform:scale</title>
+    <style>
+      /* div 클래스-앞에.으로시작 */
+      .container {
+        width: 600px;
+        margin: 0 auto;
+      }
+      .origin {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        float: left;
+        margin: 40px;
+      }
+      .origin > div {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+      .scalex:hover {
+        transform: scaleX(2);
+      }
+      .scaley:hover {
+        transform: scaleY(2);
+      }
+      .scale:hover {
+        transform: scale(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="origin">
+        <div class="scalex"></div>
+      </div>
+      <div class="origin">
+        <div class="scaley"></div>
+      </div>
+      <div class="origin">
+        <div class="scale"></div>
+      </div>
+    </div>
+  </body>
+</html>

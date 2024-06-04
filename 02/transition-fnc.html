@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition timing fnc</title>
+    <style>
+      #wrap div {
+        width: 100px;
+        height: 50px;
+        margin: 5px 10px;
+        padding: 5px;
+        color: #fff;
+        background-color: cadetblue;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+        float: left;
+      }
+      #wrap:hover div {
+        height: 400px;
+      }
+      #wrap .ease {
+        transition: all ease 3s;
+      }
+      #wrap .linear {
+        transition: all linear 3s;
+      }
+      #wrap .ease-in {
+        transition: all ease-in 3s;
+      }
+      #wrap .ease-out {
+        transition: all ease-out 3s;
+      }
+      #wrap .ease-in-out {
+        transition: all ease-in-out 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="ease">ease</div>
+      <div class="linear">linear</div>
+      <div class="ease-in">ease-in</div>
+      <div class="ease-out">ease-out</div>
+      <div class="ease-in-out">ease-in-out</div>
+    </div>
+  </body>
+</html>

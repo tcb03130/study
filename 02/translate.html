@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tranform: translate</title>
+    <style>
+      /*id는 앞에 # */
+      #container {
+        width: 800px;
+        height: 200px;
+        margin: 20px auto;
+      }
+      .origin {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        float: left;
+        margin: 40px;
+      }
+      .origin > div {
+        background-color: olivedrab;
+        width: 100px;
+        height: 100px;
+      }
+      #movex:hover {
+        /* X축(가로) 50px 이동*/
+        transform: translateX(50px);
+      }
+      #movey:hover {
+        /* Y축(세로) 50px 이동 */
+        transform: translateY(50px);
+      }
+      #movexy:hover {
+        /* 대각선 20px씩 이동 */
+        transform: translate(20px, 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="origin">
+        <div id="movex"></div>
+      </div>
+      <div class="origin">
+        <div id="movey"></div>
+      </div>
+      <div class="origin">
+        <div id="movexy"></div>
+      </div>
+    </div>
+  </body>
+</html>
